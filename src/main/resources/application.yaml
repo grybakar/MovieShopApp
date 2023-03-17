@@ -10,6 +10,8 @@ spring:
         show_sql: true
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        generate_statistics: true
+        SQL: DEBUG
     hibernate:
       ddl-auto: update
   liquibase:

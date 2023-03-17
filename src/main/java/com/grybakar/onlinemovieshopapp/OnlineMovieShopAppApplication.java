@@ -10,5 +10,8 @@ public class OnlineMovieShopAppApplication {
     SpringApplication.run(OnlineMovieShopAppApplication.class, args);
   }
 
-  }
+
+
+
+}
 

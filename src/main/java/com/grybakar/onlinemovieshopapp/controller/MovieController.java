@@ -41,14 +41,25 @@ public class MovieController {
     return ResponseEntity.ok(movieService.searchMoviesInDatabase());
   }
 
+
   @GetMapping("{id}")
   public ResponseEntity<MovieDto> searchMovieById(@PathVariable Long id) {
     return ResponseEntity.ok(movieService.searchMovieById(id));
   }
 
+  @GetMapping("search")
+  public ResponseEntity<List<MovieDto>> searchMoviesByDirectorsFullName(@RequestParam String fullName) {
+    return ResponseEntity.ok().body(movieService.searchMoviesByDirectorFullName(fullName));
+  }
+
+  @GetMapping("searchAll")
+  public ResponseEntity<List<MovieDto>> searchMovieByTitleOrActorOrDirector(@RequestParam String query) {
+    return ResponseEntity.ok().body(movieService.searchMovieByTitleOrActorOrDirector(query));
+  }
+
   @DeleteMapping("{id}")
   public ResponseEntity<Void> deletePosition(@PathVariable(name = "id") Long id) {
-    movieService.deletePosition(id);
+    movieService.deleteMovie(id);
     return ResponseEntity.noContent().build();
   }
 

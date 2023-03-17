@@ -3,6 +3,7 @@ package com.grybakar.onlinemovieshopapp.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.math.BigDecimal;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,6 @@ public class MovieDto {
   private String description;
   private String releaseDate;
 
-
   private Integer duration;
   private Float voteAverage;
   private String posterUrl;
@@ -31,5 +31,10 @@ public class MovieDto {
   @JsonInclude(Include.NON_NULL)
   private BigDecimal price;
 
+  @JsonInclude(Include.NON_NULL)
+  private Set<ActorDto> cast;
+
+  @JsonInclude(Include.NON_NULL)
+  private Set<DirectorDto> directors;
 
 }

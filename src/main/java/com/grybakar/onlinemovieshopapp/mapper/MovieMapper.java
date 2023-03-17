@@ -28,7 +28,7 @@ public interface MovieMapper {
     TmdbApi config = new TmdbApi("eef3ab7073176d58c53449962c89fce2");
     String baseUrl = config.getConfiguration().getBaseUrl();
     List<String> posterSizes = config.getConfiguration().getPosterSizes();
-    return baseUrl + posterSizes.get(3) + posterPath;
+    return baseUrl + posterSizes.get(2) + posterPath;
   }
 
 

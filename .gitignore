@@ -145,3 +145,5 @@ replay_pid*
 /.sonar/
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java,sonar
+/onlineMovieShopApp.iml
+/HELP.md
